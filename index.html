@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <script type="text/javascript" src="//code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="//code.angularjs.org/1.6.0/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="assets/scripts/app.js"></script>
+  </head>
+  <body ng-app="BTP">
+      <ui-view>
+  <div class="wrapper">
+      <form class="login" ng-controller="LoginController">
+        <img class="imglogin" src="assets/imgs/logo.png" alt="" height="42" width="42">
+        <input type="text" placeholder="Username" ng-model="user" autofocus/>
+            <i class="fa fa-user"></i>
+            <input type="password" placeholder="Password" ng-model="password" />
+            <i class="fa fa-key"></i>
+        <button type="button" ng-click="cargarMain()" class="btn btn-default btn-circle btn-lg">
+            <i class="glyphicon glyphicon-arrow-right"></i>
+        </button>
+      </form>
+  </div>
+  
+  <footer><a target="blank" href="#!">BtP</a></footer>
+  </ui-view>
+</div>
+</body>
+</html>

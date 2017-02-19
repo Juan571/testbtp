@@ -1,0 +1,109 @@
+  
+<div class="dashboard" ng-controller="ApuestasController">
+  
+  
+  
+  <nav class="navbar navbar-default navbar-static-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img class="logonav" src="assets/imgs/btplogoblanco.png" alt="" height="42" width="42"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">PARLEY <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">APUESTA AL JUGADOR</a></li>
+        <li><a href="#">APUESTAS ACTIVAS</a></li>
+        <li><a href="#">RESULTADOS</a></li>
+        <li><a href="#">POSICIONES</a></li>
+        <li><a href="#">NOTICIAS</a></li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="glyphicon glyphicon-user"></a></li>
+        <li><a class="fa fa-shopping-cart"></a></li>
+        <li><a class="fa fa-briefcase"></a></li>
+        <li><a>{{apuesta.saldo}}$</a></li>
+        <li><a></a></li>
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+  <div class="container-fluid dashboard">
+    <ol class="breadcrumb">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Listado de Ligas</a></li>
+      <li class="active">Parley</li>
+    </ol>
+    <div class="col-md-3 col" >
+      <form class="login" style="text-align: -webkit-left;" ng-controller="LoginController">
+        <a class="amonto">Monto de la Apuesta</a>
+        <input type="text" placeholder="Indique Monto" ng-model="apuesta.monto" autofocus/>
+        <i class="fa fa-user"></i>
+        <a class="amonto">Monto a Ganar</a>
+        <input type="text" placeholder="Monto a Ganar" ng-model="apuesta.montoganar" />
+        <i class="fa fa-key"></i>
+        <a class="amonto">Saldo Disponible</a>
+        <input type="text" placeholder="Saldo Disponible" ng-model="apuesta.saldo" />
+        <i class="fa fa-key"></i>
+        <div style="text-align: -webkit-center;"  class="row">
+          <button type="button" ng-click="" class="btn btnapuesta">
+            Procesar apuesta
+          </button>      
+        </div>
+    
+    
+  </form>
+    </div>
+    <div class="col-md-9 col"  >
+      <div class="col-md-6">
+        <div class="row " ng-repeat="card in cards" >
+        
+        <div class="card ">
+              <div class="card-content ">
+                <h5 class="text-right card-title">
+                {{card.time}}
+                </h5>
+              </div>
+              <div class="card-body">
+                <div class="col-md-6">
+                <i class="fa fa-futbol-o"></i> 
+                  <span class="team-name" >{{card.teamA.name}} </span>
+  
+                <div class="row">
+                  <span  >Gana </span>
+                   <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="">
+                      {{card.teamA.gana}}
+                    </label>
+                  </div>
+                </div>
+                </div>
+                
+              <div class="col-md-6">
+              <i class="fa fa-futbol-o"></i> 
+                  <span class="team-name" > {{card.teamB.name}} </span>
+              </div>
+                <a href="#" class="btn-floating btn-read-more">
+                  
+                </a>
+              </div>
+            </div>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+</div>
+
+</body>
