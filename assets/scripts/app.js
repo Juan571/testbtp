@@ -44,10 +44,10 @@ BTP.controller("ApuestasController",['$scope','$state',function($scope,$state){
       {
         time : "201712/24 17:00",
         teamA : {
-            name: "San Antonio Spols" ,
+            name: "Toronto Raptors" ,
         },
         teamB : {
-            
+            name: "Detroit Pistons" ,
         }
         
     }
